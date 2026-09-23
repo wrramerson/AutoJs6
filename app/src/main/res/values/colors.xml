@@ -67,6 +67,9 @@
     <!--<color name="floating_console_view_error">#FFEBEE</color>-->
     <!--<color name="floating_console_view_assert">#FCE4EC</color>-->
 
+    <color name="console_debug">@color/console_view_debug</color>
+    <color name="console_verbose">@color/console_view_verbose</color>
+
     <color name="floating_console_view_debug">#FAFAFA</color>
     <color name="floating_console_view_verbose">#E0E0E0</color>
     <color name="floating_console_view_info">#DCEDC8</color>

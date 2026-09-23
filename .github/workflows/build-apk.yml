@@ -46,6 +46,15 @@ jobs:
           java -version
           ./gradlew --version
 
+          echo "=== Android Gradle Plugin ==="
+          grep -R "com.android.tools.build:gradle" -n --include="*.gradle" --include="*.gradle.kts" . || true
+
+          echo "=== Kotlin Gradle Plugin ==="
+          grep -R "org.jetbrains.kotlin" -n --include="*.gradle" --include="*.gradle.kts" . || true
+
+          echo "=== Version properties ==="
+          cat version.properties
+
       - name: Build Debug APK
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.build_type == 'debug' }}
         run: |
